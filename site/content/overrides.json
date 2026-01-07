@@ -1,0 +1,248 @@
+{
+  "overrides": [
+    {
+      "name": "header-shared",
+      "selector": "[data-elementor-type=\"header\"]",
+      "applyToAll": true,
+      "localizeLinks": true,
+      "highlightActiveLinks": true,
+      "routes": ["/", "/en/"],
+      "routeByLang": {
+        "es": "/",
+        "en": "/en/"
+      },
+      "markdown": {
+        "es": "markdown/es/header.md",
+        "en": "markdown/en/header.md"
+      }
+    },
+    {
+      "name": "footer-shared",
+      "selector": "[data-elementor-type=\"footer\"]",
+      "applyToAll": true,
+      "localizeLinks": true,
+      "routes": ["/", "/en/"],
+      "routeByLang": {
+        "es": "/",
+        "en": "/en/"
+      },
+      "markdown": {
+        "es": "markdown/es/footer.md",
+        "en": "markdown/en/footer.md"
+      }
+    },
+    {
+      "name": "page-home",
+      "selector": "[data-elementor-type=\"wp-page\"][data-elementor-id=\"19\"]",
+      "routes": ["/", "/en/"],
+      "routeByLang": {
+        "es": "/",
+        "en": "/en/"
+      },
+      "markdown": {
+        "es": "markdown/es/pages/home.md",
+        "en": "markdown/en/pages/home.md"
+      }
+    },
+    {
+      "name": "page-quienes-somos",
+      "selector": "[data-elementor-type=\"wp-page\"][data-elementor-id=\"39\"]",
+      "routes": ["/quienes-somos/", "/en/quienes-somos/"],
+      "routeByLang": {
+        "es": "/quienes-somos/",
+        "en": "/en/quienes-somos/"
+      },
+      "markdown": {
+        "es": "markdown/es/pages/quienes-somos.md",
+        "en": "markdown/en/pages/quienes-somos.md"
+      }
+    },
+    {
+      "name": "page-proyecto-incunest",
+      "selector": "[data-elementor-type=\"wp-page\"][data-elementor-id=\"48\"]",
+      "routes": ["/proyecto-incunest/", "/en/proyecto-incunest/"],
+      "routeByLang": {
+        "es": "/proyecto-incunest/",
+        "en": "/en/proyecto-incunest/"
+      },
+      "markdown": {
+        "es": "markdown/es/pages/proyecto-incunest.md",
+        "en": "markdown/en/pages/proyecto-incunest.md"
+      }
+    },
+    {
+      "name": "page-te-necesitamos",
+      "selector": "[data-elementor-type=\"wp-page\"][data-elementor-id=\"59\"]",
+      "routes": ["/te-necesitamos/", "/en/te-necesitamos/"],
+      "routeByLang": {
+        "es": "/te-necesitamos/",
+        "en": "/en/te-necesitamos/"
+      },
+      "markdown": {
+        "es": "markdown/es/pages/te-necesitamos.md",
+        "en": "markdown/en/pages/te-necesitamos.md"
+      }
+    },
+    {
+      "name": "page-dona",
+      "selector": "[data-elementor-type=\"wp-page\"][data-elementor-id=\"64\"]",
+      "routes": ["/dona/", "/en/dona/"],
+      "routeByLang": {
+        "es": "/dona/",
+        "en": "/en/dona/"
+      },
+      "markdown": {
+        "es": "markdown/es/pages/dona.md",
+        "en": "markdown/en/pages/dona.md"
+      }
+    },
+    {
+      "name": "page-contacto",
+      "selector": "[data-elementor-type=\"wp-page\"][data-elementor-id=\"69\"]",
+      "routes": ["/contacto/", "/en/contacto/"],
+      "routeByLang": {
+        "es": "/contacto/",
+        "en": "/en/contacto/"
+      },
+      "markdown": {
+        "es": "markdown/es/pages/contacto.md",
+        "en": "markdown/en/pages/contacto.md"
+      }
+    },
+    {
+      "name": "page-tutoriales",
+      "selector": "[data-elementor-type=\"wp-page\"][data-elementor-id=\"1173\"]",
+      "routes": ["/tutoriales/", "/en/tutoriales/"],
+      "routeByLang": {
+        "es": "/tutoriales/",
+        "en": "/en/tutoriales/"
+      },
+      "markdown": {
+        "es": "markdown/es/pages/tutoriales.md",
+        "en": "markdown/en/pages/tutoriales.md"
+      }
+    },
+    {
+      "name": "archive-actualidad",
+      "selector": "[data-elementor-type=\"archive\"][data-elementor-id=\"587\"]",
+      "routes": ["/actualidad/", "/en/actualidad/"],
+      "routeByLang": {
+        "es": "/actualidad/",
+        "en": "/en/actualidad/"
+      },
+      "markdown": {
+        "es": "markdown/es/pages/actualidad.md",
+        "en": "markdown/en/pages/actualidad.md"
+      }
+    },
+    {
+      "name": "news-home",
+      "selector": "[data-id=\"fd5e22a\"]",
+      "routes": ["/", "/en/"],
+      "routeByLang": {
+        "es": "/",
+        "en": "/en/"
+      },
+      "styles": ["styles/news-shared.css"],
+      "markdown": {
+        "es": "markdown/es/news.md",
+        "en": "markdown/en/news.md"
+      }
+    },
+    {
+      "name": "faq-home",
+      "selector": "[data-id=\"e19c1d5\"]",
+      "routes": ["/", "/en/"],
+      "routeByLang": {
+        "es": "/",
+        "en": "/en/"
+      },
+      "styles": ["styles/faq-shared.css"],
+      "markdown": {
+        "es": "markdown/es/faq.md",
+        "en": "markdown/en/faq.md"
+      }
+    },
+    {
+      "name": "faq-te-necesitamos",
+      "selector": "[data-id=\"27938df\"]",
+      "routes": ["/te-necesitamos/", "/en/te-necesitamos/"],
+      "routeByLang": {
+        "es": "/te-necesitamos/",
+        "en": "/en/te-necesitamos/"
+      },
+      "styles": ["styles/faq-shared.css"],
+      "markdown": {
+        "es": "markdown/es/faq.md",
+        "en": "markdown/en/faq.md"
+      }
+    },
+    {
+      "name": "impacto-home",
+      "selector": "[data-id=\"bd70f12\"]",
+      "routes": ["/", "/en/"],
+      "routeByLang": {
+        "es": "/",
+        "en": "/en/"
+      },
+      "styles": ["styles/impacto-shared.css"],
+      "markdown": {
+        "es": "markdown/es/impacto.md",
+        "en": "markdown/en/impacto.md"
+      }
+    },
+    {
+      "name": "impacto-proyecto-incunest",
+      "selector": "[data-id=\"762deb3\"]",
+      "routes": ["/proyecto-incunest/", "/en/proyecto-incunest/"],
+      "routeByLang": {
+        "es": "/proyecto-incunest/",
+        "en": "/en/proyecto-incunest/"
+      },
+      "styles": ["styles/impacto-shared.css"],
+      "markdown": {
+        "es": "markdown/es/impacto.md",
+        "en": "markdown/en/impacto.md"
+      }
+    },
+    {
+      "name": "article-01",
+      "selector": "[data-id=\"18ea0e2\"]",
+      "routes": ["/articulo-01/", "/en/articulo-01/"],
+      "routeByLang": {
+        "es": "/articulo-01/",
+        "en": "/en/articulo-01/"
+      },
+      "markdown": {
+        "es": "markdown/es/articles/articulo-01.md",
+        "en": "markdown/en/articles/articulo-01.md"
+      }
+    },
+    {
+      "name": "article-02",
+      "selector": "[data-id=\"18ea0e2\"]",
+      "routes": ["/articulo-02/", "/en/articulo-02/"],
+      "routeByLang": {
+        "es": "/articulo-02/",
+        "en": "/en/articulo-02/"
+      },
+      "markdown": {
+        "es": "markdown/es/articles/articulo-02.md",
+        "en": "markdown/en/articles/articulo-02.md"
+      }
+    },
+    {
+      "name": "article-03",
+      "selector": "[data-id=\"18ea0e2\"]",
+      "routes": ["/articulo-03/", "/en/articulo-03/"],
+      "routeByLang": {
+        "es": "/articulo-03/",
+        "en": "/en/articulo-03/"
+      },
+      "markdown": {
+        "es": "markdown/es/articles/articulo-03.md",
+        "en": "markdown/en/articles/articulo-03.md"
+      }
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "name": "medicalopenworld_org",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "NEXT_IGNORE_INCORRECT_LOCKFILE=1 next dev site",
+    "build": "NEXT_IGNORE_INCORRECT_LOCKFILE=1 next build site",
+    "export": "NEXT_IGNORE_INCORRECT_LOCKFILE=1 next build site",
+    "extract-overrides": "node migration/scripts/extract-overrides.mjs",
+    "external-links": "node migration/scripts/generate-external-links.mjs",
+    "scrape": "node migration/scripts/scrape.mjs"
+  },
+  "dependencies": {
+    "@next/swc-darwin-arm64": "14.2.33",
+    "cheerio": "^1.0.0-rc.12",
+    "fast-xml-parser": "^4.4.1",
+    "linkedom": "^0.16.11",
+    "next": "^14.2.35",
+    "rehype-raw": "^7.0.0",
+    "rehype-stringify": "^10.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "remark-gfm": "^4.0.0",
+    "remark-parse": "^11.0.0",
+    "remark-rehype": "^11.1.0",
+    "unified": "^11.0.5"
+  }
+}

@@ -1,0 +1,70 @@
+.elementor-element.elementor-element-66d3a02 {
+  text-align: center;
+}
+
+.elementor-element.elementor-element-66d3a02 .elementor-heading-title {
+  font-family: "Montserrat", Sans-serif;
+  font-size: 50px;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.elementor-element.elementor-element-561698c {
+  --display: grid;
+  --e-con-grid-template-columns: repeat(3, 1fr);
+  --e-con-grid-template-rows: repeat(1, 1fr);
+  --grid-auto-flow: row;
+}
+
+.elementor-element.elementor-element-b1013fe,
+.elementor-element.elementor-element-001bcb1,
+.elementor-element.elementor-element-0e43dbb {
+  background-color: #ffffff;
+  padding: 30px 0px 0px 0px;
+  border-radius: 4px;
+}
+
+.elementor-element.elementor-element-b1013fe .elementor-counter-number-wrapper,
+.elementor-element.elementor-element-001bcb1 .elementor-counter-number-wrapper,
+.elementor-element.elementor-element-0e43dbb .elementor-counter-number-wrapper {
+  color: #000c31;
+  font-family: "Montserrat", Sans-serif;
+  font-size: 45px;
+  font-weight: 600;
+}
+
+.elementor-element.elementor-element-b1013fe .elementor-counter-title,
+.elementor-element.elementor-element-001bcb1 .elementor-counter-title,
+.elementor-element.elementor-element-0e43dbb .elementor-counter-title {
+  color: #eb5a5f;
+  font-family: "Montserrat", Sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+}
+
+@media (max-width: 767px) {
+  .elementor-element.elementor-element-66d3a02 {
+    text-align: center;
+  }
+
+  .elementor-element.elementor-element-66d3a02 .elementor-heading-title {
+    font-size: 25px;
+  }
+
+  .elementor-element.elementor-element-561698c {
+    --e-con-grid-template-columns: repeat(1, 1fr);
+    --grid-auto-flow: row;
+  }
+
+  .elementor-element.elementor-element-b1013fe .elementor-counter-number-wrapper,
+  .elementor-element.elementor-element-001bcb1 .elementor-counter-number-wrapper,
+  .elementor-element.elementor-element-0e43dbb .elementor-counter-number-wrapper {
+    font-size: 35px;
+  }
+
+  .elementor-element.elementor-element-b1013fe .elementor-counter-title,
+  .elementor-element.elementor-element-001bcb1 .elementor-counter-title,
+  .elementor-element.elementor-element-0e43dbb .elementor-counter-title {
+    font-size: 20px;
+  }
+}

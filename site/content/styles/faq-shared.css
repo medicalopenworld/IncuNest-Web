@@ -1,0 +1,152 @@
+.elementor-element.elementor-element-e19c1d5 {
+  --display: flex;
+  --flex-direction: row;
+  --container-widget-width: initial;
+  --container-widget-height: 100%;
+  --container-widget-flex-grow: 1;
+  --container-widget-align-self: stretch;
+  --flex-wrap-mobile: wrap;
+  --gap: 0px 0px;
+  --row-gap: 0px;
+  --column-gap: 0px;
+  --flex-wrap: wrap;
+}
+
+.elementor-element.elementor-element-94adebc,
+.elementor-element.elementor-element-32d8b70,
+.elementor-element.elementor-element-1281ad2 {
+  --display: flex;
+  --flex-direction: column;
+  --container-widget-width: 100%;
+  --container-widget-height: initial;
+  --container-widget-flex-grow: 0;
+  --container-widget-align-self: initial;
+  --flex-wrap-mobile: wrap;
+}
+
+.elementor-element.elementor-element-24eee09 {
+  text-align: center;
+}
+
+.elementor-element.elementor-element-24eee09 .elementor-heading-title {
+  font-family: "Montserrat", Sans-serif;
+  font-size: 50px;
+  font-weight: 800;
+  color: #eb5a5f;
+}
+
+.elementor-element.elementor-element-32f384e,
+.elementor-element.elementor-element-cd5ee58,
+.elementor-element.elementor-element-571ce40,
+.elementor-element.elementor-element-cf166f4,
+.elementor-element.elementor-element-7ab583f,
+.elementor-element.elementor-element-b442fc3,
+.elementor-element.elementor-element-523f004,
+.elementor-element.elementor-element-a16a749 {
+  --display: flex;
+}
+
+.elementor-element.elementor-element-12de68a,
+.elementor-element.elementor-element-3d9cddd,
+.elementor-element.elementor-element-ed3355a,
+.elementor-element.elementor-element-de3ea52,
+.elementor-element.elementor-element-71189f3,
+.elementor-element.elementor-element-e13c6b1,
+.elementor-element.elementor-element-96ff0aa,
+.elementor-element.elementor-element-d33ee81 {
+  --display: flex;
+  --flex-direction: column;
+  --container-widget-width: 100%;
+  --container-widget-height: initial;
+  --container-widget-flex-grow: 0;
+  --container-widget-align-self: initial;
+  --flex-wrap-mobile: wrap;
+}
+
+.elementor-element.elementor-element-1ac63a7,
+.elementor-element.elementor-element-6c3b8d3,
+.elementor-element.elementor-element-81d5187,
+.elementor-element.elementor-element-5917869,
+.elementor-element.elementor-element-dbdecfa,
+.elementor-element.elementor-element-96de8f8,
+.elementor-element.elementor-element-7ed79b7,
+.elementor-element.elementor-element-3aa8a49 {
+  font-family: "Montserrat", Sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000000;
+}
+
+.elementor-element.elementor-element-716948c,
+.elementor-element.elementor-element-94ba2fb {
+  --n-accordion-title-font-size: 1rem;
+  --n-accordion-item-title-space-between: 0px;
+  --n-accordion-item-title-distance-from-content: 0px;
+  --n-accordion-title-normal-color: #ffffff;
+  --n-accordion-title-hover-color: #ffffff;
+  --n-accordion-title-active-color: #ffffff;
+  --n-accordion-icon-size: 15px;
+}
+
+.elementor-element.elementor-element-716948c
+  > .e-n-accordion
+  > .e-n-accordion-item
+  > .e-n-accordion-item-title,
+.elementor-element.elementor-element-94ba2fb
+  > .e-n-accordion
+  > .e-n-accordion-item
+  > .e-n-accordion-item-title {
+  background-color: #000c31;
+}
+
+:where(
+    .elementor-element.elementor-element-716948c
+      > .e-n-accordion
+      > .e-n-accordion-item
+      > .e-n-accordion-item-title
+      > .e-n-accordion-item-title-header
+  )
+  > .e-n-accordion-item-title-text,
+:where(
+    .elementor-element.elementor-element-94ba2fb
+      > .e-n-accordion
+      > .e-n-accordion-item
+      > .e-n-accordion-item-title
+      > .e-n-accordion-item-title-header
+  )
+  > .e-n-accordion-item-title-text {
+  font-family: "Montserrat", Sans-serif;
+}
+
+@media (min-width: 768px) {
+  .elementor-element.elementor-element-94adebc {
+    --width: 100%;
+  }
+
+  .elementor-element.elementor-element-32d8b70,
+  .elementor-element.elementor-element-1281ad2 {
+    --width: 50%;
+  }
+}
+
+@media (max-width: 767px) {
+  .elementor-element.elementor-element-24eee09 {
+    text-align: center;
+  }
+
+  .elementor-element.elementor-element-24eee09 .elementor-heading-title {
+    font-size: 25px;
+  }
+
+  .elementor-element.elementor-element-1ac63a7,
+  .elementor-element.elementor-element-6c3b8d3,
+  .elementor-element.elementor-element-81d5187,
+  .elementor-element.elementor-element-5917869,
+  .elementor-element.elementor-element-dbdecfa,
+  .elementor-element.elementor-element-96de8f8,
+  .elementor-element.elementor-element-7ed79b7,
+  .elementor-element.elementor-element-3aa8a49 {
+    text-align: center;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,24 @@
+<div data-elementor-type="wp-post" data-elementor-id="564" class="elementor elementor-564" data-elementor-post-type="post">
+				<div class="elementor-element elementor-element-39f5e3e e-flex e-con-boxed e-con e-parent" data-id="39f5e3e" data-element_type="container">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-27c7f07 elementor-widget elementor-widget-heading" data-id="27c7f07" data-element_type="widget" data-widget_type="heading.default">
+					<h1 class="elementor-heading-title elementor-size-default">Medical Open World Celebrates Its 200th Incubator in Senegal and launches a Campaign to Multiply Its Impact</h1>				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-bae5d69 e-flex e-con-boxed e-con e-parent" data-id="bae5d69" data-element_type="container">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-2c30c7d elementor-widget elementor-widget-text-editor" data-id="2c30c7d" data-element_type="widget" data-widget_type="text-editor.default">
+									<p><span style="font-weight: 400;">Medical Open World, the NGO dedicated to democratizing medical technology to save lives, is celebrating an exciting milestone: we have delivered our 200th official incubator to Senegal. This achievement is part of a humanitarian journey that began a decade ago with a dream and continues to grow today thanks to the power of partnerships and collective commitment.</span></p><p><span style="font-weight: 400;">But this incubator is not just another one. It is the 200th unit built in collaboration with the Salesians and shipped with the support of Ayuda Contenedores. It represents the success of a collaborative model that saves the lives of newborns in areas with no access to basic medical technology. And if we count the initial incubators created before our alliance with the Salesians, we’ve now delivered 220 incubators worldwide!</span></p><p><span style="font-weight: 400;">It all began in 2015, when Alejandro Escario designed the first prototype, which went on to receive several awards. In 2017, Pablo Sánchez joined the project and dedicated the following years to refining the technology and developing the production and distribution model that now allows us to scale up significantly. The result has been exponential impact: in the last five years alone, we’ve delivered 200 incubators to countries where they can mean the difference between life and death.</span></p><p><b>What’s next?</b></p><p><span style="font-weight: 400;">We’re not stopping here. We want to go further. We are in a full phase of expansion, with a clear goal: to double our impact by 2026 and deliver another 200 incubators to health centers in vulnerable communities. To make this happen, we’re launching a crowdfunding campaign today. Because this dream will only come true with the support of many people who, like us, believe in the power of technology in service of life.</span></p><p><b>A Message from Senegal</b></p><p><span style="font-weight: 400;">To mark this milestone, we received a very special video from Senegal: the local team shows how they assembled the 200th incubator. A simple but emotional scene that reminds us that each incubator is much more than just a machine—it is a bridge to life.</span></p>								</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-7ada008 e-flex e-con-boxed e-con e-parent" data-id="7ada008" data-element_type="container">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-3e75cc2 elementor-widget elementor-widget-video" data-id="3e75cc2" data-element_type="widget" data-settings="{&quot;youtube_url&quot;:&quot;https:\/\/youtube.com\/shorts\/D-hCX1rX1LA?feature=share&quot;,&quot;video_type&quot;:&quot;youtube&quot;,&quot;controls&quot;:&quot;yes&quot;}" data-widget_type="video.default">
+							<div class="elementor-wrapper elementor-open-inline">
+			<div class="elementor-video"></div>		</div>
+						</div>
+				<div class="elementor-element elementor-element-2d32c6c elementor-widget elementor-widget-image" data-id="2d32c6c" data-element_type="widget" data-widget_type="image.default">
+															<img fetchpriority="high" decoding="async" width="800" height="598" src="/remote-assets/wp-content/uploads/2025/07/IMG_20210505_175457-1024x766.jpg" class="attachment-large size-large wp-image-368" alt="" srcset="/remote-assets/wp-content/uploads/2025/07/IMG_20210505_175457-1024x766.jpg 1024w, /remote-assets/wp-content/uploads/2025/07/IMG_20210505_175457-300x224.jpg 300w, /remote-assets/wp-content/uploads/2025/07/IMG_20210505_175457-768x574.jpg 768w, /remote-assets/wp-content/uploads/2025/07/IMG_20210505_175457-1536x1149.jpg 1536w, /remote-assets/wp-content/uploads/2025/07/IMG_20210505_175457-2048x1532.jpg 2048w" sizes="(max-width: 800px) 100vw, 800px">															</div>
+					</div>
+				</div>
+				</div>
