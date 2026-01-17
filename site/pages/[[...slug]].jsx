@@ -4,6 +4,7 @@ import Head from "next/head";
 import { useEffect } from "react";
 import { applyOverrides } from "../lib/overrides.mjs";
 import { getContentRoot } from "../lib/content-root.mjs";
+import { prefixPathsInHtml, prefixLinkAttrs, prefixScriptAttrs } from "../lib/base-path.mjs";
 
 export default function Page({ data }) {
   useEffect(() => {
@@ -120,6 +121,15 @@ export async function getStaticProps({ params }) {
         ? [...data.styles, ...overrideResult.extraStyles]
         : [...overrideResult.extraStyles];
     }
+  }
+
+  // Prefix paths with basePath for GitHub Pages deployment
+  data.bodyHtml = prefixPathsInHtml(data.bodyHtml);
+  if (Array.isArray(data.links)) {
+    data.links = data.links.map(prefixLinkAttrs);
+  }
+  if (Array.isArray(data.scripts)) {
+    data.scripts = data.scripts.map(prefixScriptAttrs);
   }
 
   return { props: { data } };
