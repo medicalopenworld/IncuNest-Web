@@ -5,24 +5,16 @@ import { fileURLToPath } from "url";
 import { load } from "cheerio";
 import { XMLParser } from "fast-xml-parser";
 
-const BASE_URL = process.env.SCRAPE_BASE_URL || "https://www.medicalopenworld.org";
+const BASE_URL = process.env.SCRAPE_BASE_URL || "https://incunest.org";
 const RAW_BASE_PATH = process.env.BASE_PATH || "";
 const BASE_PATH = RAW_BASE_PATH && !RAW_BASE_PATH.startsWith("/")
   ? `/${RAW_BASE_PATH}`
   : RAW_BASE_PATH;
 const MAX_PAGES = Number.parseInt(process.env.SCRAPE_MAX_PAGES || "0", 10);
 const AUTO_EN_VARIANTS = process.env.SCRAPE_AUTO_EN_VARIANTS !== "false";
-const DEFAULT_EXTRA_PATHS = [
-  "/en/",
-  "/en/quienes-somos/",
-  "/en/contacto/",
-  "/en/actualidad/",
-  "/en/te-necesitamos/",
-  "/en/proyecto-incunest/",
-  "/en/tutoriales/",
-  "/en/dona/"
-];
-const DEFAULT_EXCLUDE_PATHS = ["/category/sin-categoria/"];
+const DEFAULT_SITEMAP_PATHS = ["/wp-sitemap.xml", "/sitemap_index.xml", "/sitemap.xml"];
+const DEFAULT_EXTRA_PATHS = [];
+const DEFAULT_EXCLUDE_PATHS = [];
 const EXTRA_PATHS = [
   ...DEFAULT_EXTRA_PATHS,
   ...(process.env.SCRAPE_EXTRA_PATHS || "")
@@ -519,13 +511,44 @@ async function scrapePage(url) {
 }
 
 async function loadSitemapUrls() {
-  const sitemapIndexXml = await fetchText(`${BASE_URL}/wp-sitemap.xml`);
+  const candidateUrls = process.env.SCRAPE_SITEMAP_URL
+    ? [process.env.SCRAPE_SITEMAP_URL]
+    : DEFAULT_SITEMAP_PATHS.map((entry) => new URL(entry, BASE_URL).toString());
+  let sitemapIndexXml = null;
+  let sitemapIndexUrl = null;
+
+  for (const candidate of candidateUrls) {
+    try {
+      sitemapIndexXml = await fetchText(candidate);
+      sitemapIndexUrl = candidate;
+      break;
+    } catch (error) {
+      console.warn(`Skipping sitemap ${candidate}: ${error.message}`);
+    }
+  }
+
+  if (!sitemapIndexXml) {
+    throw new Error(`Failed to load sitemap index from ${candidateUrls.join(", ")}`);
+  }
+
   const index = parser.parse(sitemapIndexXml);
+  const urlsetUrls = toArray(index.urlset?.url)
+    .map((entry) => entry.loc)
+    .filter(Boolean);
+
+  if (urlsetUrls.length) {
+    return urlsetUrls;
+  }
+
   const sitemapEntries = toArray(index.sitemapindex?.sitemap);
   const sitemapUrls = sitemapEntries
     .map((entry) => entry.loc)
     .filter(Boolean)
     .filter((loc) => !loc.includes("wp-sitemap-users"));
+
+  if (!sitemapUrls.length) {
+    throw new Error(`No sitemap URLs found in ${sitemapIndexUrl}`);
+  }
 
   const pageUrls = [];
 

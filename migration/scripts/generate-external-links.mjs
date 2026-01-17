@@ -9,7 +9,7 @@ import remarkRehype from "remark-rehype";
 import rehypeRaw from "rehype-raw";
 import rehypeStringify from "rehype-stringify";
 
-const BASE_URL = process.env.SCRAPE_BASE_URL || "https://www.medicalopenworld.org";
+const BASE_URL = process.env.SCRAPE_BASE_URL || "https://incunest.org";
 const baseOrigin = new URL(BASE_URL).origin;
 
 const SCRIPT_DIR = path.dirname(fileURLToPath(import.meta.url));

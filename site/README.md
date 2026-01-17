@@ -9,8 +9,9 @@ This folder contains the Next.js site that renders the scraped snapshots and Mar
 - `content/markdown/` holds the editable Markdown per language (modules + pages).
 - `public/remote-assets/` holds the downloaded CSS/JS/media from the scrape.
 
-Shared modules include header/footer, news, FAQ, and Impacto Real.
-Full-page content lives under `content/markdown/*/pages/`.
+Shared modules (header/footer or reusable sections) can live under
+`content/markdown/<lang>/`.
+Full-page content lives under `content/markdown/<lang>/pages/`.
 
 Header/footer link helpers:
 

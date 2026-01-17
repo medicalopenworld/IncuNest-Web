@@ -1,6 +1,6 @@
-# Medical Open World static snapshot
+# IncuNest static snapshot
 
-This repo keeps a static Next.js site that renders scraped WordPress snapshots plus Markdown overrides.
+This repo keeps a static Next.js site that renders scraped WordPress snapshots plus Markdown overrides for incunest.org.
 
 ## Structure
 

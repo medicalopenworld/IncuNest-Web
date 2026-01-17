@@ -35,7 +35,7 @@ npm run scrape
 
 Qué hace el scraper:
 
-- Lee el sitemap en `https://www.medicalopenworld.org/wp-sitemap.xml`.
+- Lee el sitemap en `https://incunest.org/sitemap_index.xml` (o el definido en `SCRAPE_SITEMAP_URL`).
 - Descarga cada URL y su HTML.
 - Copia el `<head>` (title, meta, link, style, script).
 - Reescribe links internos y assets para que apunten al nuevo sitio.
@@ -53,17 +53,8 @@ Los overrides permiten editar texto sin perder la estructura HTML original:
 
 **Módulos compartidos** (mismo contenido en varias páginas):
 
-- `site/content/markdown/es/news.md` y `site/content/markdown/en/news.md`
-- `site/content/markdown/es/faq.md` y `site/content/markdown/en/faq.md`
-- `site/content/markdown/es/impacto.md` y `site/content/markdown/en/impacto.md`
-- `site/content/markdown/es/header.md` y `site/content/markdown/en/header.md`
-- `site/content/markdown/es/footer.md` y `site/content/markdown/en/footer.md`
-
-Notas para noticias:
-
-- El módulo de noticias en la home usa el Markdown (`news.md`) y muestra 3 cards + botón.
-- La página de noticias (`/actualidad/` y `/en/actualidad/`) usa Markdown de página
-  (`site/content/markdown/*/pages/actualidad.md`) generado desde el template archive.
+- Define un override y un Markdown reutilizable por idioma (por ejemplo, header/footer).
+- Los overrides con `applyToAll` se aplican en todas las rutas.
 
 Notas para cabecera/pie:
 
@@ -73,29 +64,10 @@ Notas para cabecera/pie:
 - Para regenerar el HTML base usa `npm run extract-overrides` (sin `--force` si
   ya hay contenido editado).
 
-**Contenido por página** (ej. artículos):
+**Contenido por página**:
 
-- `site/content/markdown/es/articles/articulo-01.md`
-- `site/content/markdown/en/articles/articulo-01.md`
-
-**Contenido por página** (páginas completas):
-
-- `site/content/markdown/es/pages/home.md`
-- `site/content/markdown/es/pages/quienes-somos.md`
-- `site/content/markdown/es/pages/proyecto-incunest.md`
-- `site/content/markdown/es/pages/te-necesitamos.md`
-- `site/content/markdown/es/pages/dona.md`
-- `site/content/markdown/es/pages/contacto.md`
-- `site/content/markdown/es/pages/tutoriales.md`
-- `site/content/markdown/es/pages/actualidad.md`
-- `site/content/markdown/en/pages/home.md`
-- `site/content/markdown/en/pages/quienes-somos.md`
-- `site/content/markdown/en/pages/proyecto-incunest.md`
-- `site/content/markdown/en/pages/te-necesitamos.md`
-- `site/content/markdown/en/pages/dona.md`
-- `site/content/markdown/en/pages/contacto.md`
-- `site/content/markdown/en/pages/actualidad.md`
-- `site/content/markdown/en/pages/tutoriales.md`
+- Guarda los Markdown bajo `site/content/markdown/<lang>/pages/`.
+- El nombre del archivo puede seguir el slug de la ruta (por ejemplo `home.md`, `contacto.md`).
 
 Para inicializar los Markdown desde el HTML actual:
 
@@ -119,24 +91,14 @@ npm run external-links
 
 El reporte se genera en `migration/EXTERNAL_LINKS.md`.
 
-### 3.5 Estilos compartidos para módulos (noticias)
+### 3.5 Estilos compartidos para módulos
 
 Algunos módulos de Elementor dependen de CSS generado por página (por ejemplo
-`.elementor-19` o `.elementor-587`). Cuando un módulo se reutiliza en otra
-ruta, ese CSS no aplica porque el prefijo cambia. Para evitarlo se añade CSS
-compartido por override.
+`.elementor-19`). Cuando un módulo se reutiliza en otra ruta, ese CSS no aplica
+porque el prefijo cambia. Para evitarlo se añade CSS compartido por override.
 
-Ejemplo actual:
-
-- `site/content/styles/news-shared.css` contiene el CSS del módulo de noticias
-  sin prefijo de página.
-- `site/content/overrides.json` referencia ese archivo en `styles` para
-  `news-home`.
-
-Si Elementor cambia los IDs después de un nuevo scrape, actualiza:
-
-1) `site/content/styles/news-shared.css` con los nuevos `elementor-element-*`.
-2) Ejecuta `npm run dev` o `npm run build` para validar.
+Si Elementor cambia los IDs después de un nuevo scrape, actualiza el CSS y
+valida con `npm run dev` o `npm run build`.
 
 ### 3.6 Generar el sitio estático
 
@@ -157,13 +119,15 @@ BASE_PATH=/mi-subpath npm run build
 
 ## 4) Variables de entorno
 
-- `SCRAPE_BASE_URL` (default: `https://www.medicalopenworld.org`)
+- `SCRAPE_BASE_URL` (default: `https://incunest.org`)
   - Cambia la URL origen del scrape.
+- `SCRAPE_SITEMAP_URL` (default: intenta `/wp-sitemap.xml`, `/sitemap_index.xml`, `/sitemap.xml`)
+  - Forza la URL del sitemap cuando no sigue el patrón estándar.
 - `SCRAPE_MAX_PAGES` (default: 0)
   - Limita la cantidad de páginas a descargar (0 = sin límite).
-- `SCRAPE_EXTRA_PATHS` (default: incluye `/en/`, `/en/quienes-somos/`, `/en/contacto/`, `/en/actualidad/`, `/en/te-necesitamos/`, `/en/proyecto-incunest/`, `/en/tutoriales/`, `/en/dona/`)
+- `SCRAPE_EXTRA_PATHS` (default: vacío)
   - Paths extra a incluir aunque no estén en el sitemap.
-- `SCRAPE_EXCLUDE_PATHS` (default: incluye `/category/sin-categoria/`)
+- `SCRAPE_EXCLUDE_PATHS` (default: vacío)
   - Paths a excluir aunque estén en el sitemap.
 - `SCRAPE_EXTRA_URLS` (default: vacío)
   - URLs absolutas extra a incluir en el scrape.
