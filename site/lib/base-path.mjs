@@ -37,8 +37,8 @@ export function prefixPathsInHtml(html) {
   }
   const normalized = html
     .replace(/(href|src|srcset)=(["'])\/wp-(content|includes)\//g, "$1=$2/remote-assets/wp-$3/")
-    .replace(/(url\\()(['"]?)\\/wp-(content|includes)\\//g, "$1$2/remote-assets/wp-$3/")
-    .replace(/(,\\s*)\\/wp-(content|includes)\\//g, "$1/remote-assets/wp-$2/");
+    .replace(/(url\()(['"]?)\/wp-(content|includes)\//g, "$1$2/remote-assets/wp-$3/")
+    .replace(/(,\s*)\/wp-(content|includes)\//g, "$1/remote-assets/wp-$2/");
   // Escape special regex characters in BASE_PATH
   const escapedBasePath = BASE_PATH.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
   // Use negative lookahead to avoid double-prefixing paths that already have the base path
