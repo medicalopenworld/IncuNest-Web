@@ -3,6 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "prebuild": "node migration/scripts/prefix-base-path-assets.mjs",
     "dev": "NEXT_IGNORE_INCORRECT_LOCKFILE=1 next dev site",
     "build": "NEXT_IGNORE_INCORRECT_LOCKFILE=1 next build site",
     "export": "NEXT_IGNORE_INCORRECT_LOCKFILE=1 next build site",
