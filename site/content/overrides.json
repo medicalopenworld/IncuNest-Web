@@ -1,3 +1,96 @@
 {
-  "overrides": []
+  "overrides": [
+    {
+      "name": "header-shared",
+      "selector": "[data-elementor-type=\"header\"]",
+      "applyToAll": true,
+      "highlightActiveLinks": true,
+      "routes": ["/", "/en/home/"],
+      "routeByLang": {
+        "es": "/",
+        "en": "/en/home/"
+      },
+      "markdown": {
+        "es": "markdown/es/header.md",
+        "en": "markdown/en/header.md"
+      }
+    },
+    {
+      "name": "footer-shared",
+      "selector": "[data-elementor-type=\"footer\"]",
+      "applyToAll": true,
+      "routes": ["/", "/en/home/"],
+      "routeByLang": {
+        "es": "/",
+        "en": "/en/home/"
+      },
+      "markdown": {
+        "es": "markdown/es/footer.md",
+        "en": "markdown/en/footer.md"
+      }
+    },
+    {
+      "name": "page-home",
+      "selector": "[data-elementor-type=\"wp-page\"]",
+      "routes": ["/", "/en/home/"],
+      "routeByLang": {
+        "es": "/",
+        "en": "/en/home/"
+      },
+      "markdown": {
+        "es": "markdown/es/pages/home.md",
+        "en": "markdown/en/pages/home.md"
+      }
+    },
+    {
+      "name": "page-contacto",
+      "selector": "[data-elementor-type=\"wp-page\"]",
+      "routes": ["/contacto/", "/en/contact/"],
+      "routeByLang": {
+        "es": "/contacto/",
+        "en": "/en/contact/"
+      },
+      "markdown": {
+        "es": "markdown/es/pages/contacto.md",
+        "en": "markdown/en/pages/contact.md"
+      }
+    },
+    {
+      "name": "page-servicios",
+      "selector": "[data-elementor-type=\"wp-page\"]",
+      "routes": ["/servicios/", "/en/services/"],
+      "routeByLang": {
+        "es": "/servicios/",
+        "en": "/en/services/"
+      },
+      "markdown": {
+        "es": "markdown/es/pages/servicios.md",
+        "en": "markdown/en/pages/services.md"
+      }
+    },
+    {
+      "name": "page-declaracion-accesibilidad",
+      "selector": "[data-elementor-type=\"wp-page\"]",
+      "routes": ["/declaracion-de-accesibilidad/"],
+      "markdown": {
+        "es": "markdown/es/pages/declaracion-de-accesibilidad.md"
+      }
+    },
+    {
+      "name": "page-mapa-del-sitio",
+      "selector": "[data-elementor-type=\"wp-page\"]",
+      "routes": ["/mapa-del-sitio/"],
+      "markdown": {
+        "es": "markdown/es/pages/mapa-del-sitio.md"
+      }
+    },
+    {
+      "name": "page-politica-privacidad",
+      "selector": "[data-elementor-type=\"wp-page\"]",
+      "routes": ["/politica-privacidad/"],
+      "markdown": {
+        "es": "markdown/es/pages/politica-privacidad.md"
+      }
+    }
+  ]
 }
